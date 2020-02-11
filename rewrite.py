@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from PIL import Image, ImageFont, ImageDraw
 from textwrap import TextWrapper, dedent
 
@@ -6,12 +7,13 @@ wrapper = TextWrapper(width = 20)
 img = Image.open("src/template.jpg")
 draw = ImageDraw.Draw(img)
 fontsize = 10
+max_fontsize = 512
 selected_font = ImageFont.truetype("src/CaviarDreams.ttf", size = fontsize)
 text_box_width, text_box_height = 0, 0
 
 #Get the input text and wrap it 
 print("Enter the text to be input - ")
-input_text = input()
+input_text = input().strip()
 beautiful_text = wrapper.fill(input_text)
 beautiful_text = dedent(beautiful_text)
 
@@ -21,8 +23,11 @@ beautiful_text = dedent(beautiful_text)
 #Thus, the font has to be reconstructed with a new size each time.
 ####################################################################################################
 
-#Increase the font size till the text is just a little too wide
-while fontsize < 500 and selected_font.getsize_multiline(beautiful_text)[0] < (0.8 * img.size[0]):
+<<<<<<< HEAD
+#Increase the font size till the text is just a little too wide and fontsize <= max_fontsize
+while selected_font.getsize_multiline(beautiful_text)[0] < (0.8 * img.size[0]) \
+        and fontsize <= max_fontsize:
+>>>>>>> f0525c87df98a2a540ef4652f249f03f3989a34e
     fontsize += 2
     selected_font = ImageFont.truetype("src/CaviarDreams.ttf", size = fontsize)
 

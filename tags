@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+GetTextBoxSize	function.py	/^def GetTextBoxSize(input_text, fontsize, char_width):$/;"	f
+GetTextBoxSize	generate.py	/^def GetTextBoxSize(input_text, fontsize, char_width):$/;"	f
+MaximiseFontSize	generate.py	/^def MaximiseFontSize(input_text):$/;"	f
+char_width	generate.py	/^char_width = 22                             #the number of characters allowed per line$/;"	v
+draw	generate.py	/^draw = ImageDraw.Draw(img)$/;"	v
+fontsize	generate.py	/^fontsize = 2$/;"	v
+fontsize	generate.py	/^fontsize = MaximiseFontSize(input_text)$/;"	v
+height	generate.py	/^width, height = img.size$/;"	v
+img	generate.py	/^img = Image.open("src\/template.jpg")$/;"	v
+input_text	generate.py	/^input_text = input()$/;"	v
+selected_font	generate.py	/^selected_font = ImageFont.truetype("src\/CaviarDreams.ttf", fontsize)$/;"	v
+text_box_height	generate.py	/^text_box_height = 0$/;"	v
+text_box_width	generate.py	/^text_box_width = 0$/;"	v
+width	generate.py	/^width, height = img.size$/;"	v
+wrapper	generate.py	/^wrapper = TextWrapper(width = char_width)$/;"	v
+x_begin	generate.py	/^x_begin, y_begin = width\/2 , (height\/2 + 30)     #need a bit more space vertically to account /;"	v
+y_begin	generate.py	/^x_begin, y_begin = width\/2 , (height\/2 + 30)     #need a bit more space vertically to account /;"	v
