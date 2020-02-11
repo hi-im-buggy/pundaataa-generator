@@ -1,5 +1,5 @@
 from PIL import Image, ImageFont, ImageDraw
-from textwrap import TextWrapper
+from textwrap import TextWrapper, dedent
 
 #Initialising some variables
 wrapper = TextWrapper(width = 20)
@@ -13,6 +13,7 @@ text_box_width, text_box_height = 0, 0
 print("Enter the text to be input - ")
 input_text = input()
 beautiful_text = wrapper.fill(input_text)
+beautiful_text = dedent(beautiful_text)
 
 ####################################################################################################
 #In the following code, note that wrapper.width is a mutable attribute of the object wrapper, whereas
