@@ -23,11 +23,9 @@ beautiful_text = dedent(beautiful_text)
 #Thus, the font has to be reconstructed with a new size each time.
 ####################################################################################################
 
-<<<<<<< HEAD
 #Increase the font size till the text is just a little too wide and fontsize <= max_fontsize
 while selected_font.getsize_multiline(beautiful_text)[0] < (0.8 * img.size[0]) \
         and fontsize <= max_fontsize:
->>>>>>> f0525c87df98a2a540ef4652f249f03f3989a34e
     fontsize += 2
     selected_font = ImageFont.truetype("src/CaviarDreams.ttf", size = fontsize)
 
