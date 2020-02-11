@@ -22,7 +22,7 @@ beautiful_text = dedent(beautiful_text)
 ####################################################################################################
 
 #Increase the font size till the text is just a little too wide
-while selected_font.getsize_multiline(beautiful_text)[0] < (0.8 * img.size[0]):
+while fontsize < 500 and selected_font.getsize_multiline(beautiful_text)[0] < (0.8 * img.size[0]):
     fontsize += 2
     selected_font = ImageFont.truetype("src/CaviarDreams.ttf", size = fontsize)
 
