@@ -1,7 +1,7 @@
 # Pundaata Generator
 
-Insert your own message into the Pundaata meme template, inspired by
-[@pundaata](https://www.instagram.com/pundaata/).
+Insert your own message into the Pundaata meme template, made for 
+[@pundaataa](https://www.instagram.com/pundaataa/).
 
 ## How to use
 
