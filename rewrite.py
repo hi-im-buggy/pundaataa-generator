@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from PIL import Image, ImageFont, ImageDraw
 from textwrap import TextWrapper
 
@@ -6,12 +7,13 @@ wrapper = TextWrapper(width = 20)
 img = Image.open("src/template.jpg")
 draw = ImageDraw.Draw(img)
 fontsize = 10
+max_fontsize = 512
 selected_font = ImageFont.truetype("src/CaviarDreams.ttf", size = fontsize)
 text_box_width, text_box_height = 0, 0
 
 #Get the input text and wrap it 
 print("Enter the text to be input - ")
-input_text = input()
+input_text = input().strip()
 beautiful_text = wrapper.fill(input_text)
 
 ####################################################################################################
@@ -20,8 +22,9 @@ beautiful_text = wrapper.fill(input_text)
 #Thus, the font has to be reconstructed with a new size each time.
 ####################################################################################################
 
-#Increase the font size till the text is just a little too wide
-while selected_font.getsize_multiline(beautiful_text)[0] < (0.8 * img.size[0]):
+#Increase the font size till the text is just a little too wide and fontsize <= max_fontsize
+while selected_font.getsize_multiline(beautiful_text)[0] < (0.8 * img.size[0]) \
+        and fontsize <= max_fontsize:
     fontsize += 2
     selected_font = ImageFont.truetype("src/CaviarDreams.ttf", size = fontsize)
 
